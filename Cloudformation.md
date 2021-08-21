@@ -28,4 +28,10 @@ CloudFormer is a tool that lets you create CloudFormation templates looking at p
 
 Unlike most AWS tools and services, CloudFormer isn't completely managed by AWS; it's a self-hosted tool that you can instantiate on demand using CloudFormation. To do so, follow the given steps:
 
-- 
+1. Open https://console.aws.amazon.com/cloudformation in your browser.
+2. Select the AWS region where the resources you are trying to templatize are.
+3. In the Select a sample template drop-down menu, choose CloudFormer and click on Next
+4. On that screen, at the top, you can provide a stack name (feel free to keep the default name AWSCloudFormer ) and in the bottom part, you are asked to provide two extra parameters, a username, and a password. Those will be used later to log in to CloudFormer. Pick a username and a password, and click on Next.
+5. On the next screen, you can provide extra tags and more advanced options, but we will simply continue by clicking on Next.
+
+
