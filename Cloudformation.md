@@ -24,3 +24,6 @@ Once your template is complete, you can simply click on a button and go from des
 
 ## Cloudformer
 
+CloudFormer is a tool that lets you create CloudFormation templates looking at pre-existing resources. If you have a set of resources that you have already created on an ad-hoc basis like we have done so far in the book, you can use CloudFormer to group them under a new CloudFormation template. You can then later customize the template that CloudFormer generates using a text editor or even CloudFormation designer and make it fit your needs.
+
+
