@@ -20,3 +20,4 @@ The editor on the bottom section of the designer supports auto completion using 
 
 ![image](https://user-images.githubusercontent.com/23625821/130321537-467a0be7-6142-49c0-b101-e705c6cb091c.png)
 
+Once your template is complete, you can simply click on a button and go from designing your stack to launching it.
