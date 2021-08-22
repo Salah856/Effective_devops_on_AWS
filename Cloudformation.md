@@ -197,8 +197,7 @@ t.add_output(Output(
   "WebUrl",
   Description="Application endpoint",
   Value=Join("", [
-  "http://", GetAtt(instance, "PublicDnsName"),
-  ":", ApplicationPort
+      "http://", GetAtt(instance, "PublicDnsName"), ":", ApplicationPort
   ]),
 ))
 
