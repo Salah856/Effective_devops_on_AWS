@@ -112,3 +112,28 @@ t.add_parameter(Parameter(
 ))
 
 ```
+
+
+The next thing we will look at is the security group. We will proceed exactly as we did for our KeyPair parameter.
+
+```py
+t.add_resource(ec2.SecurityGroup(
+   "SecurityGroup",
+   GroupDescription="Allow SSH and TCP/{} access".format(ApplicationPort),
+   SecurityGroupIngress=[
+   ec2.SecurityGroupRule(
+     IpProtocol="tcp",
+     FromPort="22",
+     ToPort="22",
+     CidrIp="0.0.0.0/0",
+   ),
+   ec2.SecurityGroupRule(
+     IpProtocol="tcp",
+     FromPort=ApplicationPort,
+     ToPort=ApplicationPort,
+     CidrIp="0.0.0.0/0",
+  ),
+ ],
+))
+
+```
