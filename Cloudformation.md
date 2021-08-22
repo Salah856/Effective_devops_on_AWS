@@ -166,3 +166,15 @@ The remaining information needed to create our EC2 instances is the security gro
 
 In Troposphere, this is done by calling the Ref() function. As before, we will add the resulting output to our template with the help of the add_resource function:
 
+
+```py
+t.add_resource(ec2.Instance(
+  "instance",
+  ImageId="ami-a4c7edb2",
+  InstanceType="t2.micro",
+  SecurityGroups=[Ref("SecurityGroup")],
+  KeyName=Ref("KeyPair"),
+  UserData=user_data,
+))
+
+```
