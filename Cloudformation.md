@@ -202,3 +202,10 @@ t.add_output(Output(
 ))
 
 ```
+
+
+At that point, we can make our script output the final result of the template we generated:
+
+```py
+print t.to_json()
+```
