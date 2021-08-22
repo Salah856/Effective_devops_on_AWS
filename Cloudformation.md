@@ -34,4 +34,11 @@ Unlike most AWS tools and services, CloudFormer isn't completely managed by AWS;
 4. On that screen, at the top, you can provide a stack name (feel free to keep the default name AWSCloudFormer ) and in the bottom part, you are asked to provide two extra parameters, a username, and a password. Those will be used later to log in to CloudFormer. Pick a username and a password, and click on Next.
 5. On the next screen, you can provide extra tags and more advanced options, but we will simply continue by clicking on Next.
 
+6. This brings us to the review page where we will check the checkbox to acknowledge that this will cause AWS CloudFormation to create IAM resources. Click on Create.
+7. This will bring us back on the main screen of the CloudFormation console where we can see our AWS CloudFormer stack being created. Once the Status goes from CREATE_IN_PROGRESS to CREATE_COMPLETE, select it and click on the Output tab at the bottom. At that point, you have created the resources needed to use CloudFomer. 
+8. In order to create a stack with it, do the following:
+ In the Outputs tab (which illustrates the outputs section of CloudFormation), click on the website URL link. This will open up the CloudFormer tool. Log in using the username and password provided in the fourth step of the previous set of instructions. The following screen will appear:
+ 
+ ![image](https://user-images.githubusercontent.com/23625821/130345475-f37792b0-0e4f-4922-9bad-c8241294ec4c.png)
+
 
