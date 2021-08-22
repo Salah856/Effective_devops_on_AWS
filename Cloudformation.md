@@ -156,3 +156,13 @@ user_data = Base64(Join('\n', [
 ]))
 
 ```
+
+
+We will now focus on the main resource of our template, our EC2 instance. The creation of the instance requires providing a name for identifying the resource, an image ID, an instance type, a security group, the keypair to use for the SSH access, and the user data. 
+
+In order to keep things simple, we will hard code the AMI ID ( ami-a4c7edb2 ) and instance type ( t2.micro ). 
+
+The remaining information needed to create our EC2 instances is the security group information and the keypair name, which we collected previously by defining a parameter and a resource. In CloudFormation, you can reference pre-existing subsections of your template by using the keyword Ref . 
+
+In Troposphere, this is done by calling the Ref() function. As before, we will add the resulting output to our template with the help of the add_resource function:
+
