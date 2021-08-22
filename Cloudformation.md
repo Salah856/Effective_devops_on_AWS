@@ -178,3 +178,28 @@ t.add_resource(ec2.Instance(
 ))
 
 ```
+
+In the last section of our script, we will focus on producing the Outputs section of the template that gets populated when CloudFormation creates a stack. 
+
+This selection allows you to print out useful information that was computed during the launch of the stack. In our case, there are two useful pieces information, the URL to access our web application and the public IP address of the instance so that we can SSH into it if we want to. 
+
+In order to retrieve such information, CloudFormation uses the function Fn::GetAtt . In troposphere this is translated into using the GetAttr() function:
+
+```py
+
+t.add_output(Output(
+  "InstancePublicIp",
+  Description="Public IP of our instance.",
+  Value=GetAtt(instance, "PublicIp"),
+))
+
+t.add_output(Output(
+  "WebUrl",
+  Description="Application endpoint",
+  Value=Join("", [
+  "http://", GetAtt(instance, "PublicDnsName"),
+  ":", ApplicationPort
+  ]),
+))
+
+```
