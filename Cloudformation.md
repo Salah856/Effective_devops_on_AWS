@@ -96,3 +96,19 @@ Throughout this book, we will create and run concurrently several CloudFormation
 ```py
 t.add_description("Effective DevOps in AWS: HelloWorld web application")
 ```
+
+When we launched EC2 instances using the web command line interface, we selected which key pair to use in order to gain SSH access to the host. In order to not lose this ability, the first thing our template will have is a parameter to offer the CloudFormation user the ability to select which key pair to use when launching the EC2 instance. 
+
+To do that, we are going to create a Parameter object, and initialize it by providing an identifier, a description, a parameter type, a description and a constraint description to help to make the right decision
+
+when we launch the stack. In order for this parameter to exist in our final template, we will also use the add_paramter() function defined in the template class:
+
+```py
+t.add_parameter(Parameter(
+   "KeyPair",
+   Description="Name of an existing EC2 KeyPair to SSH",
+   Type="AWS::EC2::KeyPair::KeyName",
+   ConstraintDescription="must be the name of an existing EC2 KeyPair.",
+))
+
+```
