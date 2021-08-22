@@ -140,3 +140,19 @@ t.add_resource(ec2.SecurityGroup(
 ))
 
 ```
+
+In our next section, we will replace the need to log on to our EC2 instance and install by hand the helloworld.js file and its init scripts. To do so, we will take advantage of the UserData feature that EC2 offers. 
+
+When you create an EC2 instance, you have the ability through the UserData optional parameter to provide a set of commands to run once the virtual machine has spawned up.
+
+```py
+
+user_data = Base64(Join('\n', [
+ "#!/bin/bash",
+ "sudo yum install --enablerepo=epel -y nodejs",
+ "wget http://bit.ly/2vESNuc -O /home/ec2-user/helloworld.js",
+ "wget http://bit.ly/2vVvT18 -O /etc/init/helloworld.conf",
+ "start helloworld"
+]))
+
+```
