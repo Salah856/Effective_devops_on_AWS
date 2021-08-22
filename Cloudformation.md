@@ -117,6 +117,9 @@ t.add_parameter(Parameter(
 The next thing we will look at is the security group. We will proceed exactly as we did for our KeyPair parameter.
 
 ```py
+
+ApplicationPort = 3000 
+
 t.add_resource(ec2.SecurityGroup(
    "SecurityGroup",
    GroupDescription="Allow SSH and TCP/{} access".format(ApplicationPort),
