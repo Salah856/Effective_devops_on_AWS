@@ -71,15 +71,16 @@ We will start our file by importing a number of definitions from the troposphere
 ```py
 
 """Generating CloudFormation template."""
+
 from troposphere import (
-Base64,
-ec2,
-GetAtt,
-Join,
-Output,
-Parameter,
-Ref,
-Template,
+  Base64,
+  ec2,
+  GetAtt,
+  Join,
+  Output,
+  Parameter,
+  Ref,
+  Template,
 )
 
 ```
