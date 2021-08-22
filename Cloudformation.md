@@ -85,3 +85,14 @@ from troposphere import (
 
 ```
 
+From a code standpoint, the first thing we will do is initialize a Template variable. By the end of our script, the template will contain the entire description of our infrastructure and we will be able to simply print its output to get our CloudFromation template:
+
+```py
+t = Template()
+```
+
+Throughout this book, we will create and run concurrently several CloudFormation templates. To help us identify what's in a given stack, we have the ability to provide a description. After the creation of the template, add the description as follow:
+
+```py
+t.add_description("Effective DevOps in AWS: HelloWorld web application")
+```
