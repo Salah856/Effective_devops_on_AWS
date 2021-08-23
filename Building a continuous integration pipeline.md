@@ -11,7 +11,11 @@ We are going to start by navigating to our ansible roles directory:
 
 ```sh
 ~ cd ansible/roles
-
 ```
 
+We are now going to create our Jenkins role with the ansible-galaxy command:
+
+```sh
+~ ansible-galaxy init jenkins
+```
 
