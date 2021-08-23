@@ -110,4 +110,10 @@ We can now create our CloudFormation template in order to call that role.
 
 #### Creating the CloudFormation template
 
+We are first going to duplicate the Python script. Go to your EffectiveDevOpsTemplates directory where you have your troposphere templates and then clone the ansiblebase-cf-template.py file:
+
+```sh
+$ cp ansiblebase-cf-template.py jenkins-cf-template.py
+```
+
 
