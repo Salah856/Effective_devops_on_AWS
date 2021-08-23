@@ -22,3 +22,15 @@ We are now going to create our Jenkins role with the ansible-galaxy command:
 We are now going to edit the task definition for this new role by editing the file jenkins/tasks/main.yml.
 
 Open up the file with your favorite text editor.
+
+
+Below the initial comment of the tasks file, add the following:
+
+```yaml
+
+- name: Import Jenkins GPG key
+  rpm_key:
+  state: present
+  key: http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
+```
+
