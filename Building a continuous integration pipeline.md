@@ -46,3 +46,13 @@ The next step will be to import the yum repository to our yum repository configu
     gpgcheck: yes
 
 ```
+We have reached the point where we can now use yum to install Jenkins. We will do that with the following call:
+
+```yaml
+
+- name: Install Jenkins
+  yum:
+    name: jenkins
+    enablerepo: jenkins
+    state: present
+```
