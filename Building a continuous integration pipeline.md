@@ -19,3 +19,6 @@ We are now going to create our Jenkins role with the ansible-galaxy command:
 ~ ansible-galaxy init jenkins
 ```
 
+We are now going to edit the task definition for this new role by editing the file jenkins/tasks/main.yml.
+
+Open up the file with your favorite text editor.
