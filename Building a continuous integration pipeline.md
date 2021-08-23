@@ -116,4 +116,11 @@ We are first going to duplicate the Python script. Go to your EffectiveDevOpsTem
 $ cp ansiblebase-cf-template.py jenkins-cf-template.py
 ```
 
+We are now going to edit jenkins-cf-template.py. The first two changes we will do are the application name and port. Jenkins runs by default on TCP/8080 :
+
+```py
+ApplicationName = "jenkins"
+ApplicationPort = "8080"
+```
+
 
