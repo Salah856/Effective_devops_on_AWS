@@ -34,3 +34,15 @@ Below the initial comment of the tasks file, add the following:
     key: http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
 ```
 
+The next step will be to import the yum repository to our yum repository configuration (basically an entry in /etc/yum.repos.d ):
+
+```yaml
+- name: Add Jenkins repository
+  yum_repository:
+    name: jenkins
+    description: jenkins repository
+    baseurl: http://pkg.jenkins.io/redhat
+    enabled: no
+    gpgcheck: yes
+
+```
