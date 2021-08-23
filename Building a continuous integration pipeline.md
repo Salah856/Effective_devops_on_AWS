@@ -7,5 +7,11 @@ We are going to use Jenkins as our central system to run our continuous integrat
 Famous for its rich plugin ecosystem, Jenkins has recently gone through a major new release (Jenkins 2.0), which has put the spotlight on a number of very DevOps centric features including the ability to create natively delivery pipelines that can be checked in and version-controlled and better integration with source control system such as GitHub. 
 
 ### Creating the Ansible playbook for Jenkins
+We are going to start by navigating to our ansible roles directory:
+
+```sh
+~ cd ansible/roles
+
+```
 
 
