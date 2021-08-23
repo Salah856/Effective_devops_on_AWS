@@ -54,5 +54,5 @@ We have reached the point where we can now use yum to install Jenkins. We will d
   yum:
     name: jenkins
     enablerepo: jenkins
-    state: present
+    state: present # installed 
 ```
