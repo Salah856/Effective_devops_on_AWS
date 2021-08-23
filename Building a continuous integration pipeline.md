@@ -71,3 +71,17 @@ We also want to start the service and have it enabled at the chkconfig level so 
     state: started
 
 ```
+
+We built a role that will allow us to install jenkins . We will want to create a new EC2 instance and install Jenkins on it with the end goal of testing our nodejs code on the instance. In order to be able to do that, the Jenkins host will need to also have node and npm installed.
+
+In the root directory of our ansible repository, create the playbook file. The filename is jenkins.yml and it should look like this:
+
+```yaml
+---
+- hosts: "{{ target | default('localhost') }}"
+  become: yes
+  roles:
+    - jenkins
+    - nodejs
+
+```
