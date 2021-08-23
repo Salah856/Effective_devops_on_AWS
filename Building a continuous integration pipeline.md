@@ -30,7 +30,7 @@ Below the initial comment of the tasks file, add the following:
 
 - name: Import Jenkins GPG key
   rpm_key:
-  state: present
-  key: http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
+    state: present
+    key: http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
 ```
 
