@@ -56,3 +56,18 @@ We have reached the point where we can now use yum to install Jenkins. We will d
     enablerepo: jenkins
     state: present # installed 
 ```
+
+Since the jenkins repository is disabled by default, we are enabling it through the enablerepo flag for the execution of this yum command.
+
+At this point, Jenkins will be installed. As a best practice, we will specify which version of Jenkins we want to install (in our case the current version is 2.45). 
+
+We also want to start the service and have it enabled at the chkconfig level so that if the EC2 instance where jenkins is installed restarts, Jenkins will start automatically. We can do that using the service module. Add the following after the previous call:
+
+```yaml
+- name: Start Jenkins
+  service:
+    name: jenkins-2.45
+    enabled: yes
+    state: started
+
+```
