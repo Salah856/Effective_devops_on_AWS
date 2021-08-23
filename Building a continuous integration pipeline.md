@@ -85,3 +85,15 @@ In the root directory of our ansible repository, create the playbook file. The f
     - nodejs
 
 ```
+
+Our role is now complete, so we can commit our new role and push it to GitHub. Following the best practices described previously, we will start by creating a new branch, then add our files, then commit and finally push the changes:
+
+```sh
+$ git checkout -b jenkins
+$ git add jenkins.yml roles/jenkins
+$ git commit -m "Adding a Jenkins playbook and role"
+$ git push
+
+ ```
+ 
+ 
