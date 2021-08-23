@@ -96,4 +96,18 @@ $ git push
 
  ```
  
- 
+From there, submit a pull request inside GitHub and merge the branch back to master, and get back to the master branch:
+```sh
+$ git checkout master
+```
+In a real life situation, you likely also want to periodically run to retrieve other developers changes:
+
+```sh
+$ git pull
+```
+
+We can now create our CloudFormation template in order to call that role.
+
+#### Creating the CloudFormation template
+
+
