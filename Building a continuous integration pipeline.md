@@ -123,4 +123,33 @@ ApplicationName = "jenkins"
 ApplicationPort = "8080"
 ```
 
+Then installing awscs: 
+
+```sh
+
+$ pip install awacs
+```
+
+When you are using EC2 instances, the instance profile feature provided lets you specify an IAM role to your instance. In other words, we can assign IAM permissions directly to EC2 instances without having to use access keys and secret access keys.
+
+```py
+
+from troposphere.iam import (
+    InstanceProfile,
+    PolicyType as IAMPolicy,
+    Role,
+)
+
+from awacs.aws import (
+    Action,
+    Allow,
+    Policy,
+    Principal,
+    Statement,
+)
+
+from awacs.sts import AssumeRole
+
+```
+
 
