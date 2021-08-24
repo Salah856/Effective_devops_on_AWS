@@ -197,3 +197,14 @@ t.add_resource(ec2.Instance(
 ))
 
 ```
+
+The file should now look like this http://bit.ly/2uDvyRi. You can save the changes, commit to GitHub the new script and generate the CloudFormation template:
+
+```sh
+git add jenkins-cf-template.py
+git commit -m "Adding troposphere script to generate a Jenkins instance"
+
+git push
+python jenkins-cf-template.py > jenkins-cf.template
+
+```
