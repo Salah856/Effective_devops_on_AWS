@@ -163,7 +163,7 @@ t.add_resource(Role(
           Effect=Allow,
           Action=[AssumeRole],
           Principal=Principal("Service", ["ec2.amazonaws.com"])
-      )
+        )
       ]
    )
   )
