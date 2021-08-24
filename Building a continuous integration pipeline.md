@@ -183,3 +183,17 @@ t.add_resource(InstanceProfile(
 
 ```
 
+Finally, we can reference our new instance profile by updating the declaration of our instance. We will add a period after UserData=ud and on the line after initializing the IamInstanceProfile as such:
+
+```py
+t.add_resource(ec2.Instance(
+    "instance",
+    ImageId="ami-a4c7edb2",
+    InstanceType="t2.micro",
+    SecurityGroups=[Ref("SecurityGroup")],
+    KeyName=Ref("KeyPair"),
+    UserData=ud,
+    IamInstanceProfile=Ref("InstanceProfile"),
+))
+
+```
