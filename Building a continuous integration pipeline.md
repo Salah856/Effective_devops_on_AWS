@@ -171,3 +171,15 @@ t.add_resource(Role(
 
 
 ```
+
+Proceeding similarly to what we just did for the role, we can now create our instance profile and reference the role. Below the creation of our role, add the following:
+
+```py
+t.add_resource(InstanceProfile(
+      "InstanceProfile",
+      Path="/",
+      Roles=[Ref("Role")]
+))
+
+```
+
