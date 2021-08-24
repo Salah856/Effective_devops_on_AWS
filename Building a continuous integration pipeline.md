@@ -245,3 +245,5 @@ $ aws cloudformation describe-stacks \
 }
 
 ```
+
+### Preparing our CI environment
