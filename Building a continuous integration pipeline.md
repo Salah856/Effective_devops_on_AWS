@@ -208,3 +208,17 @@ git push
 python jenkins-cf-template.py > jenkins-cf.template
 
 ```
+
+## Launching the stack and configuring Jenkins
+
+In order to create our EC2 instance with Jenkins running on it, we will run this command: 
+
+
+```sh
+$ aws cloudformation create-stack \
+    --capabilities CAPABILITY_IAM \
+    --stack-name jenkins \
+    --template-body file://jenkins-cf.template \
+    --parameters ParameterKey=KeyPair,ParameterValue=EffectiveDevOpsAWS
+
+```
