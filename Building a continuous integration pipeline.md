@@ -230,3 +230,18 @@ $ aws cloudformation wait stack-create-complete \
     --stack-name jenkins
 
 ```
+And extract the host public IP:
+
+```sh
+$ aws cloudformation describe-stacks \
+  --stack-name jenkins \
+  --query 'Stacks[0].Outputs[0]'
+```
+```
+{
+    "Description": "Public IP of our instance.",
+    "OutputKey": "InstancePublicIp",
+    "OutputValue": "54.175.97.69"
+}
+
+```
