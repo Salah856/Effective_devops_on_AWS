@@ -152,4 +152,22 @@ from awacs.sts import AssumeRole
 
 ```
 
+Then, in between the instantiation of the variables ud and the creation of the instance, we are going to create and add our role resource to the template as such:
 
+```py
+t.add_resource(Role(
+    "Role",
+    AssumeRolePolicyDocument=Policy(
+      Statement=[
+          Statement(
+          Effect=Allow,
+          Action=[AssumeRole],
+          Principal=Principal("Service", ["ec2.amazonaws.com"])
+      )
+      ]
+   )
+  )
+)
+
+
+```
