@@ -222,3 +222,11 @@ $ aws cloudformation create-stack \
     --parameters ParameterKey=KeyPair,ParameterValue=EffectiveDevOpsAWS
 
 ```
+
+As before, we can then wait until the execution is complete:
+
+```sh
+$ aws cloudformation wait stack-create-complete \
+    --stack-name jenkins
+
+```
